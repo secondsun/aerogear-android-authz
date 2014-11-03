@@ -111,6 +111,10 @@ public class AuthzServiceTest extends PatchedActivityInstrumentationTestCase<Mai
         assertEquals("testRefreshedAccessToken", service.fetchAccessToken("testAccountId", new OAuth2Properties(baseUrl, null)));
     }
 
+    public void testAccountsHashCode() {
+        account.hashCode();
+    }
+    
     private long hourFromNow() {
         Calendar hourFromNow = Calendar.getInstance();
         hourFromNow.set(HOUR, hourFromNow.get(HOUR) + 1);
