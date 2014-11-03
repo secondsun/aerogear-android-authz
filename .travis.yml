@@ -4,8 +4,8 @@ notifications:
   irc: "irc.freenode.org#aerogear"
 
 jdk:
-   - oraclejdk8
-   - oraclejdk7
+   #- oraclejdk8
+   #- oraclejdk7
    - openjdk6
 
 android:
@@ -70,4 +70,9 @@ before_install:
   - cd $PWD/aerogear-android-pipe/
   - mvn install -DskipTests -fn  --quiet 
   - cd -
+
+script:
+  # I'm curious
+  - mvn -v
+  - mvn install -B
 
